@@ -131,6 +131,7 @@ public class Schedule extends javax.swing.JFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, -1, -1));
 
         jTextField4.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField4.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 380, 40));
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N

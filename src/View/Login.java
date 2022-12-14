@@ -27,6 +27,7 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         TextUser = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         TextPassword = new javax.swing.JPasswordField();
         StringPassword = new javax.swing.JLabel();
         StringUser = new javax.swing.JLabel();
@@ -45,28 +46,37 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(TextUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 470, 260, 30));
 
+        jButton1.setFont(new java.awt.Font("Book Antiqua", 1, 18)); // NOI18N
+        jButton1.setText("ENTRAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 600, 260, 40));
+
         TextPassword.setBackground(new java.awt.Color(255, 255, 255));
         TextPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextPasswordActionPerformed(evt);
             }
         });
-        getContentPane().add(TextPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 550, 260, 30));
+        getContentPane().add(TextPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 540, 260, 30));
 
-        StringPassword.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        StringPassword.setFont(new java.awt.Font("Book Antiqua", 1, 24)); // NOI18N
         StringPassword.setForeground(new java.awt.Color(255, 255, 255));
         StringPassword.setText("Senha");
-        getContentPane().add(StringPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 520, -1, -1));
+        getContentPane().add(StringPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, -1, -1));
 
-        StringUser.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        StringUser.setFont(new java.awt.Font("Book Antiqua", 1, 24)); // NOI18N
         StringUser.setForeground(new java.awt.Color(255, 255, 255));
         StringUser.setText("Usuário");
         getContentPane().add(StringUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, -1, -1));
 
-        StringLogin.setFont(new java.awt.Font("Arial Black", 0, 36)); // NOI18N
+        StringLogin.setFont(new java.awt.Font("Book Antiqua", 1, 36)); // NOI18N
         StringLogin.setForeground(new java.awt.Color(255, 255, 255));
         StringLogin.setText("Login");
-        getContentPane().add(StringLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, -1, -1));
+        getContentPane().add(StringLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, -1, -1));
 
         jLabelPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/painel-login.png"))); // NOI18N
         getContentPane().add(jLabelPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, -1, -1));
@@ -84,6 +94,10 @@ public class Login extends javax.swing.JFrame {
     private void TextPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextPasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TextPasswordActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,6 +140,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel StringUser;
     private javax.swing.JPasswordField TextPassword;
     private javax.swing.JTextField TextUser;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabelBackground;
     private javax.swing.JLabel jLabelPanel;
     // End of variables declaration//GEN-END:variables
