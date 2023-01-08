@@ -4,17 +4,24 @@
  */
 package View;
 
+import Controller.LoginController;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author mateus.ranzani
  */
 public class Login extends javax.swing.JFrame {
 
+    private final LoginController controller;
+
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        controller = new LoginController(this);
     }
 
     /**
@@ -97,6 +104,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        controller.fizTarefa();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -144,4 +152,24 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelBackground;
     private javax.swing.JLabel jLabelPanel;
     // End of variables declaration//GEN-END:variables
+
+    public JPasswordField getTextPassword() {
+        return TextPassword;
+    }
+
+    public void setTextPassword(JPasswordField TextPassword) {
+        this.TextPassword = TextPassword;
+    }
+
+    public JTextField getTextUser() {
+        return TextUser;
+    }
+
+    public void setTextUser(JTextField TextUser) {
+        this.TextUser = TextUser;
+    }
+
+
+
 }
+
