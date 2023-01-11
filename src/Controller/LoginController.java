@@ -5,6 +5,7 @@
 package Controller;
 
 import Controller.Helper.LoginHelper;
+import Model.DAO.UsuarioDAO;
 import Model.Usuario;
 import View.Login;
 
@@ -24,6 +25,8 @@ public class LoginController {
     
     public void entrarNoSistema() {
         Usuario usuario = helper.obterModelo();
+        
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
     }
     
     public void fizTarefa() {
