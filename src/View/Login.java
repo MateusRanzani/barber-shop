@@ -6,6 +6,7 @@ package View;
 
 import Controller.LoginController;
 import Model.DAO.Banco;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -155,6 +156,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPanel;
     // End of variables declaration//GEN-END:variables
 
+    public void exibeMensagem(String mensagem) {
+        JOptionPane.showMessageDialog(null, mensagem);
+    }
+    
     public JPasswordField getTextPassword() {
         return TextPassword;
     }

@@ -8,6 +8,7 @@ import Controller.Helper.LoginHelper;
 import Model.DAO.UsuarioDAO;
 import Model.Usuario;
 import View.Login;
+import View.MenuPrincipal;
 
 /**
  *
@@ -27,6 +28,14 @@ public class LoginController {
         Usuario usuario = helper.obterModelo();
         
         UsuarioDAO usuarioDAO = new UsuarioDAO();
+
+        Usuario usuarioAutenticado = usuarioDAO.selectPorNomeESenha(usuario);
+        
+        if(usuarioAutenticado != null) {
+            MenuPrincipal menu = new MenuPrincipal();
+        } else {
+            view.exibeMensagem("Usuário ou senha inválidos");
+        }
     }
     
     public void fizTarefa() {
