@@ -23,23 +23,24 @@ public class LoginController {
         this.view = view;
         this.helper = new LoginHelper(view);
     }
-    
+
     public void entrarNoSistema() {
         Usuario usuario = helper.obterModelo();
-        
+
         UsuarioDAO usuarioDAO = new UsuarioDAO();
 
         Usuario usuarioAutenticado = usuarioDAO.selectPorNomeESenha(usuario);
-        
-        if(usuarioAutenticado != null) {
+
+        if (usuarioAutenticado != null) {
             MenuPrincipal menu = new MenuPrincipal();
             menu.setVisible(true);
+            view.dispose();
         } else {
             view.exibeMensagem("Usuário ou senha inválidos");
         }
     }
-    
+
     public void fizTarefa() {
-    
+
     }
 }
