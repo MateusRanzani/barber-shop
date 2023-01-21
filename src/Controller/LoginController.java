@@ -33,6 +33,7 @@ public class LoginController {
         
         if(usuarioAutenticado != null) {
             MenuPrincipal menu = new MenuPrincipal();
+            menu.setVisible(true);
         } else {
             view.exibeMensagem("Usuário ou senha inválidos");
         }
