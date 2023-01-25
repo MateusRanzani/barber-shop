@@ -4,17 +4,22 @@
  */
 package View;
 
+import Controller.ScheduleController;
+
 /**
  *
  * @author mateus.ranzani
  */
 public class Schedule extends javax.swing.JFrame {
 
+    private final ScheduleController controller;
+
     /**
      * Creates new form Schedule
      */
     public Schedule() {
         initComponents();
+        controller = new ScheduleController(this);
     }
 
     /**
@@ -49,7 +54,7 @@ public class Schedule extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabelBackground = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
