@@ -30,8 +30,8 @@ public class AgendaHelper {
             agendamento.getCliente().getNome(),
             agendamento.getServico().getDescricao(),
             agendamento.getValor(),
-            agendamento.getData(),
-            agendamento.getData(),
+            agendamento.getDataFormatada(),
+            agendamento.getHoraFormatada(),
             agendamento.getObservacao()
             });
         }
