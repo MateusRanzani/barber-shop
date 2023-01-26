@@ -5,6 +5,7 @@
 package View;
 
 import Controller.ScheduleController;
+import javax.swing.JTable;
 
 /**
  *
@@ -20,6 +21,7 @@ public class Schedule extends javax.swing.JFrame {
     public Schedule() {
         initComponents();
         controller = new ScheduleController(this);
+        iniciar();
     }
 
     /**
@@ -32,7 +34,7 @@ public class Schedule extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TableAgendamento = new javax.swing.JTable();
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox1 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -57,7 +59,7 @@ public class Schedule extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TableAgendamento.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -68,7 +70,7 @@ public class Schedule extends javax.swing.JFrame {
                 "ID", "Cliente", "Serviço", "Valor", "Data", "Hora", "Observação"
             }
         ));
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(TableAgendamento);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 560, 1060, 310));
 
@@ -209,6 +211,7 @@ public class Schedule extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable TableAgendamento;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
@@ -224,7 +227,6 @@ public class Schedule extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelBackground;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -232,4 +234,18 @@ public class Schedule extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
+
+    private void iniciar() {
+        this.controller.atualizaTabela();
+    }
+
+    public JTable getTableAgendamento() {
+        return TableAgendamento;
+    }
+
+    public void setTableAgendamento(JTable TableAgendamento) {
+        this.TableAgendamento = TableAgendamento;
+    }
+    
+    
 }
