@@ -5,6 +5,7 @@
 package View;
 
 import Controller.ScheduleController;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 
 /**
@@ -35,8 +36,8 @@ public class Schedule extends javax.swing.JFrame {
 
         jScrollPane2 = new javax.swing.JScrollPane();
         TableAgendamento = new javax.swing.JTable();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBoxServico = new javax.swing.JComboBox<>();
+        jComboBoxCliente = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
@@ -74,17 +75,15 @@ public class Schedule extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 560, 1060, 310));
 
-        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        jComboBox2.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Corte", "Barba", "Sobrancelha " }));
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 380, 40));
+        jComboBoxServico.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBoxServico.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        jComboBoxServico.setForeground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jComboBoxServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 380, 40));
 
-        jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alan", "Pedro", "Geovane" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 380, 40));
+        jComboBoxCliente.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBoxCliente.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        jComboBoxCliente.setForeground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jComboBoxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 380, 40));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setForeground(new java.awt.Color(0, 0, 0));
@@ -213,8 +212,8 @@ public class Schedule extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TableAgendamento;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBoxCliente;
+    private javax.swing.JComboBox<String> jComboBoxServico;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -237,6 +236,8 @@ public class Schedule extends javax.swing.JFrame {
 
     private void iniciar() {
         this.controller.atualizaTabela();
+        this.controller.atualizaCliente();
+        this.controller.atualizaServico();
     }
 
     public JTable getTableAgendamento() {
@@ -246,6 +247,21 @@ public class Schedule extends javax.swing.JFrame {
     public void setTableAgendamento(JTable TableAgendamento) {
         this.TableAgendamento = TableAgendamento;
     }
-    
-    
+
+    public JComboBox<String> getjComboBoxCliente() {
+        return jComboBoxCliente;
+    }
+
+    public void setjComboBoxCliente(JComboBox<String> jComboBoxCliente) {
+        this.jComboBoxCliente = jComboBoxCliente;
+    }
+
+    public JComboBox<String> getjComboBoxServico() {
+        return jComboBoxServico;
+    }
+
+    public void setjComboBoxServico(JComboBox<String> jComboBoxServico) {
+        this.jComboBoxServico = jComboBoxServico;
+    }
+
 }
