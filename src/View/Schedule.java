@@ -7,6 +7,7 @@ package View;
 import Controller.ScheduleController;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -43,7 +44,7 @@ public class Schedule extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jTextValor = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -131,9 +132,9 @@ public class Schedule extends javax.swing.JFrame {
         jLabel5.setText("Valor R$");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, -1, -1));
 
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 380, 40));
+        jTextValor.setBackground(new java.awt.Color(255, 255, 255));
+        jTextValor.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        getContentPane().add(jTextValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 380, 40));
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -224,9 +225,9 @@ public class Schedule extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextValor;
     // End of variables declaration//GEN-END:variables
 
     private void iniciar() {
@@ -258,5 +259,15 @@ public class Schedule extends javax.swing.JFrame {
     public void setjComboBoxServico(JComboBox<String> jComboBoxServico) {
         this.jComboBoxServico = jComboBoxServico;
     }
+
+    public JTextField getjTextValor() {
+        return jTextValor;
+    }
+
+    public void setjTextValor(JTextField jTextValor) {
+        this.jTextValor = jTextValor;
+    }
+    
+    
 
 }

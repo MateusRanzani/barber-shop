@@ -47,4 +47,9 @@ public class ScheduleController {
         helper.preencherServicos(servicos);
 
     }
+    
+    public void atualizaValor() {
+        Servico servico = helper.obtemServico();
+           helper.setarValor(servico.getValor());
+    }
 }
