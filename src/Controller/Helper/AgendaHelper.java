@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author mateus.ranzani
  */
-public class AgendaHelper {
+public class AgendaHelper implements IHelper {
 
     private final Schedule view;
 
@@ -65,6 +65,16 @@ public class AgendaHelper {
 
     public void setarValor(float valor) {
         view.getjTextValor().setText(valor + "");
+    }
+
+    @Override
+    public Agendamento obterModelo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void limparTela() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

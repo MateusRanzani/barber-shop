@@ -53,4 +53,8 @@ public class ScheduleController {
            helper.setarValor(servico.getValor());
     }
     
+    public void agendar() {
+        
+    }
+    
 }

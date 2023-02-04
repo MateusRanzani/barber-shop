@@ -36,7 +36,7 @@ public class Schedule extends javax.swing.JFrame {
         jComboBoxCliente = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        jButtonAgendar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
@@ -95,11 +95,16 @@ public class Schedule extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 230, 510, 240));
 
-        jButton1.setBackground(new java.awt.Color(0, 255, 0));
-        jButton1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Agendar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 510, 40));
+        jButtonAgendar.setBackground(new java.awt.Color(0, 255, 0));
+        jButtonAgendar.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jButtonAgendar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonAgendar.setText("Agendar");
+        jButtonAgendar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAgendarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonAgendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 510, 40));
 
         jLabel9.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -179,6 +184,10 @@ public class Schedule extends javax.swing.JFrame {
         this.controller.atualizaValor();
     }//GEN-LAST:event_jComboBoxServicoItemStateChanged
 
+    private void jButtonAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgendarActionPerformed
+        this.controller.agendar(); 
+    }//GEN-LAST:event_jButtonAgendarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -216,7 +225,7 @@ public class Schedule extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TableAgendamento;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonAgendar;
     private javax.swing.JComboBox<String> jComboBoxCliente;
     private javax.swing.JComboBox<String> jComboBoxServico;
     private javax.swing.JLabel jLabel1;
