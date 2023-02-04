@@ -52,4 +52,5 @@ public class ScheduleController {
         Servico servico = helper.obtemServico();
            helper.setarValor(servico.getValor());
     }
+    
 }

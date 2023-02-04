@@ -74,6 +74,11 @@ public class Schedule extends javax.swing.JFrame {
         jComboBoxServico.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxServico.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jComboBoxServico.setForeground(new java.awt.Color(51, 51, 51));
+        jComboBoxServico.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxServicoItemStateChanged(evt);
+            }
+        });
         getContentPane().add(jComboBoxServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 380, 40));
 
         jComboBoxCliente.setBackground(new java.awt.Color(255, 255, 255));
@@ -170,6 +175,10 @@ public class Schedule extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
 
+    private void jComboBoxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxServicoItemStateChanged
+        this.controller.atualizaValor();
+    }//GEN-LAST:event_jComboBoxServicoItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -234,6 +243,7 @@ public class Schedule extends javax.swing.JFrame {
         this.controller.atualizaTabela();
         this.controller.atualizaCliente();
         this.controller.atualizaServico();
+        this.controller.atualizaValor();
     }
 
     public JTable getTableAgendamento() {
@@ -267,7 +277,5 @@ public class Schedule extends javax.swing.JFrame {
     public void setjTextValor(JTextField jTextValor) {
         this.jTextValor = jTextValor;
     }
-    
-    
 
 }
