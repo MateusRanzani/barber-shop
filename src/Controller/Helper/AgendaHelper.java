@@ -69,7 +69,8 @@ public class AgendaHelper implements IHelper {
 
     @Override
     public Agendamento obterModelo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int id = view.get
+//        new Agendamento;
     }
 
     @Override
