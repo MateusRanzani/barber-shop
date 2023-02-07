@@ -7,6 +7,7 @@ package View;
 import Controller.ScheduleController;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
@@ -35,18 +36,18 @@ public class Schedule extends javax.swing.JFrame {
         jComboBoxServico = new javax.swing.JComboBox<>();
         jComboBoxCliente = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextObservacao = new javax.swing.JTextArea();
         jButtonAgendar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        jTextFormatedHora = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        jTextFormatedData = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jTextValor = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextId = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -89,9 +90,9 @@ public class Schedule extends javax.swing.JFrame {
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setForeground(new java.awt.Color(0, 0, 0));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jTextObservacao.setColumns(20);
+        jTextObservacao.setRows(5);
+        jScrollPane1.setViewportView(jTextObservacao);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 230, 510, 240));
 
@@ -116,21 +117,21 @@ public class Schedule extends javax.swing.JFrame {
         jLabel8.setText("Agenda");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 90, -1, -1));
 
-        jTextField6.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        jTextFormatedHora.setBackground(new java.awt.Color(255, 255, 255));
+        jTextFormatedHora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                jTextFormatedHoraActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 490, 380, 40));
+        getContentPane().add(jTextFormatedHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 490, 380, 40));
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Hora");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 500, -1, -1));
 
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 380, 40));
+        jTextFormatedData.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jTextFormatedData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 380, 40));
 
         jLabel6.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -151,8 +152,8 @@ public class Schedule extends javax.swing.JFrame {
         jLabel4.setText("Serviço");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, -1, -1));
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 380, 40));
+        jTextId.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jTextId, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 380, 40));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -176,16 +177,16 @@ public class Schedule extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void jTextFormatedHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFormatedHoraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_jTextFormatedHoraActionPerformed
 
     private void jComboBoxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxServicoItemStateChanged
         this.controller.atualizaValor();
     }//GEN-LAST:event_jComboBoxServicoItemStateChanged
 
     private void jButtonAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgendarActionPerformed
-        this.controller.agendar(); 
+        this.controller.agendar();
     }//GEN-LAST:event_jButtonAgendarActionPerformed
 
     /**
@@ -240,11 +241,11 @@ public class Schedule extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelBackground;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextFormatedData;
+    private javax.swing.JTextField jTextFormatedHora;
+    private javax.swing.JTextField jTextId;
+    private javax.swing.JTextArea jTextObservacao;
     private javax.swing.JTextField jTextValor;
     // End of variables declaration//GEN-END:variables
 
@@ -285,6 +286,38 @@ public class Schedule extends javax.swing.JFrame {
 
     public void setjTextValor(JTextField jTextValor) {
         this.jTextValor = jTextValor;
+    }
+
+    public JTextField getjTextFormatedData() {
+        return jTextFormatedData;
+    }
+
+    public void setjTextFormatedData(JTextField jTextFormatedData) {
+        this.jTextFormatedData = jTextFormatedData;
+    }
+
+    public JTextField getjTextFormatedHora() {
+        return jTextFormatedHora;
+    }
+
+    public void setjTextFormatedHora(JTextField jTextFormatedHora) {
+        this.jTextFormatedHora = jTextFormatedHora;
+    }
+
+    public JTextField getjTextId() {
+        return jTextId;
+    }
+
+    public void setjTextId(JTextField jTextId) {
+        this.jTextId = jTextId;
+    }
+
+    public JTextArea getjTextObservacao() {
+        return jTextObservacao;
+    }
+
+    public void setjTextObservacao(JTextArea jTextObservacao) {
+        this.jTextObservacao = jTextObservacao;
     }
 
 }

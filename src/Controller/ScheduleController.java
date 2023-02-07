@@ -47,14 +47,17 @@ public class ScheduleController {
         helper.preencherServicos(servicos);
 
     }
-    
+
     public void atualizaValor() {
         Servico servico = helper.obtemServico();
-           helper.setarValor(servico.getValor());
+        helper.setarValor(servico.getValor());
     }
-    
+
     public void agendar() {
-        
+        Agendamento agendamento = helper.obterModelo();
+        new AgendamentoDAO().insert(agendamento);
+        atualizaTabela();
+        helper.limparTela();
     }
-    
+
 }
