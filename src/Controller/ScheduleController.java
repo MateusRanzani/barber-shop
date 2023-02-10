@@ -11,8 +11,10 @@ import Model.DAO.AgendamentoDAO;
 import Model.DAO.ClienteDAO;
 import Model.DAO.ServicoDAO;
 import Model.Servico;
+import Service.Correio;
 import View.Schedule;
 import java.util.ArrayList;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 /**
  *
@@ -56,8 +58,13 @@ public class ScheduleController {
     public void agendar() {
         Agendamento agendamento = helper.obterModelo();
         new AgendamentoDAO().insert(agendamento);
+
+        Correio correio = new Correio();
+        correio.NotificarPorEmail(agendamento);
+
         atualizaTabela();
         helper.limparTela();
+
     }
 
 }

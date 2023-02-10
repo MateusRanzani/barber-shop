@@ -19,13 +19,14 @@ public class EmailTeste {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         
-        
-        Email email = new Email("Senha e Usuário Sistema Service Desk", "Seggue usuário e senha para acesso ao sistema de auditoria\n"+"Usuario:FelipeSoster\n"+"Senha: 123456", "tiagoluz.h607@gmail.com");
-        
-        email.enviar();
-        
+
+//        Email email = new Email(
+//                "Assunto da Barbearia", 
+//                "Mensagem padrão do Sistema da Barbearia\n" + "Usuario:FelipeSoster\n" + "Senha: 123456", 
+//                "tiagoluz.h607@gmail.com");
+//
+//        email.enviar();
 
     }
-    
+
 }

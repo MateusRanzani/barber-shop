@@ -85,6 +85,16 @@ public class Schedule extends javax.swing.JFrame {
         jComboBoxCliente.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxCliente.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jComboBoxCliente.setForeground(new java.awt.Color(51, 51, 51));
+        jComboBoxCliente.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxClienteItemStateChanged(evt);
+            }
+        });
+        jComboBoxCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxClienteActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBoxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 380, 40));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
@@ -153,6 +163,11 @@ public class Schedule extends javax.swing.JFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, -1, -1));
 
         jTextId.setBackground(new java.awt.Color(255, 255, 255));
+        jTextId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextIdActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextId, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 380, 40));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
@@ -188,6 +203,16 @@ public class Schedule extends javax.swing.JFrame {
     private void jButtonAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgendarActionPerformed
         this.controller.agendar();
     }//GEN-LAST:event_jButtonAgendarActionPerformed
+
+    private void jTextIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextIdActionPerformed
+    }//GEN-LAST:event_jTextIdActionPerformed
+
+    private void jComboBoxClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxClienteActionPerformed
+
+    private void jComboBoxClienteItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxClienteItemStateChanged
+    }//GEN-LAST:event_jComboBoxClienteItemStateChanged
 
     /**
      * @param args the command line arguments

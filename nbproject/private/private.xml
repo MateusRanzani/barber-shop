@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/mateus.ranzani/Documents/NetBeansProjects/BarberShop_Java/src/Controller/Helper/IHelper.java</file>
             <file>file:/C:/Users/mateus.ranzani/Documents/NetBeansProjects/BarberShop_Java/src/View/Schedule.java</file>
-            <file>file:/C:/Users/mateus.ranzani/Documents/NetBeansProjects/BarberShop_Java/src/View/Login.java</file>
+            <file>file:/C:/Users/mateus.ranzani/Documents/NetBeansProjects/BarberShop_Java/src/Controller/ScheduleController.java</file>
+            <file>file:/C:/Users/mateus.ranzani/Documents/NetBeansProjects/BarberShop_Java/src/Controller/Helper/AgendaHelper.java</file>
         </group>
     </open-files>
 </project-private>

@@ -34,6 +34,7 @@ public class Banco {
         Usuario usuario1 = new Usuario(1, "barbeiro", 'M', "09/05/1996", "30212121", "barbeiro@barbershop.com", "521454123", "barbeiro", "administrador");
         Usuario usuario2 = new Usuario(2, "estagiario", 'M', "09/05/1996", "30212122", "estagiario@barbershop.com", "451244123", "estagiario", "funcionario");
 
+        Cliente cliente11 = new Cliente(11, "Mateus Ranzani", 'M', "30/01/1995", "30212126", "mateusranzani238@gmail.com", "5142487", "Rua jaboti 35 Canudos NH", "93300012");
         Cliente cliente1 = new Cliente(1, "Alan Figueiredo", 'M', "30/01/1995", "30212126", "tiagoluz.h607@gmail.com", "5142487", "Rua jaboti 35 Canudos NH", "93300012");
         Cliente cliente2 = new Cliente(2, "Judite Oliveira", 'F', "30/08/1994", "30212127", "juditeoliveirapet@gmail.com", "5142487745", "Rua campo bom 78 Centro NH", "93300045");
         Cliente cliente3 = new Cliente(3, "Paulo Ricado", 'M', "24/04/1997", "30212128", "pauloricardopet@gmail.com", "78451458", "Rua Tres Irmaos 30 Vila Nova - NH", "933007496");
@@ -70,6 +71,7 @@ public class Banco {
         cliente.add(cliente8);
         cliente.add(cliente9);
         cliente.add(cliente10);
+        cliente.add(cliente11);
 
         servico.add(servico1);
         servico.add(servico2);
